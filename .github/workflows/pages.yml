@@ -1,7 +1,9 @@
-name: Deploy GitHub Pages
+name: Build and publish site
 
 on:
   push:
+    branches: [ main ]
+  pull_request:
     branches: [ main ]
 
 permissions:
@@ -10,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,32 +26,18 @@ jobs:
       - name: Install Bundler
         run: gem install bundler
 
-      - name: Install Jekyll and dependencies
+      - name: Install Jekyll dependencies
         working-directory: ./docs
-        run: |
-          if [ -f Gemfile ]; then
-            bundle install
-          else
-            gem install jekyll
-          fi
+        run: bundle install
 
       - name: Build site with Jekyll
         working-directory: ./docs
-        run: |
-          if [ -f Gemfile ]; then
-            bundle exec jekyll build -d ../_site
-          else
-            jekyll build -s ./ -d ../_site
-          fi
+        run: bundle exec jekyll build -d ../_site
 
-      - name: Upload built site
-        uses: actions/upload-pages-artifact@v2
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: _site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          # keep empty to let action set commit message automatically
+          # user can change Pages settings to 'gh-pages' branch if needed
