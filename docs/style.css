@@ -30,6 +30,11 @@ body{
 .repo{font-size:13px;color:#bfefff}
 .badges{display:flex;gap:8px;margin:6px 0}
 .badges img{height:20px;border-radius:4px}
+.project-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.project-icon{width:48px;height:48px;border-radius:8px;object-fit:cover;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02)}
+.title-wrap{display:flex;align-items:center;gap:10px}
+.site-link{font-size:13px;color:#c7f9ff;background:rgba(255,255,255,0.02);padding:4px 8px;border-radius:6px;text-decoration:none;border:1px solid rgba(255,255,255,0.02)}
+.site-link:hover{background:rgba(255,255,255,0.03)}
 .footer{margin-top:28px;padding:18px;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.02)}
 
 @media(min-width:720px){

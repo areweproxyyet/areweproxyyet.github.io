@@ -22,13 +22,30 @@
         <ul class="project-list">
           {% for p in site.data.projects.projects %}
           <li class="project-item">
-            <a href="{{ p.repo }}" target="_blank" rel="noopener noreferrer"><strong>{{ p.name }}</strong></a>
+            {% assign parts = p.repo | remove: 'https://github.com/' | split: '/' %}
+            {% if parts.size >= 2 %}
+              {% assign owner = parts[0] %}
+              {% assign repo = parts[1] %}
+            {% endif %}
+
+            <div class="project-head">
+              {% if owner %}
+                <a class="icon-link" href="{% if p.site %}{{ p.site }}{% else %}{{ p.repo }}{% endif %}" target="_blank" rel="noopener noreferrer">
+                  <img class="project-icon" src="https://github.com/{{ owner }}.png?size=128" alt="{{ owner }}">
+                </a>
+              {% endif %}
+
+              <div class="title-wrap">
+                <a href="{{ p.repo }}" target="_blank" rel="noopener noreferrer"><strong>{{ p.name }}</strong></a>
+                {% if p.site %}
+                  <a class="site-link" href="{{ p.site }}" target="_blank" rel="noopener noreferrer">Website</a>
+                {% endif %}
+              </div>
+            </div>
+
             <p class="desc">{{ p.desc }}</p>
             <div class="badges">
-              {% assign parts = p.repo | remove: 'https://github.com/' | split: '/' %}
-              {% if parts.size >= 2 %}
-                {% assign owner = parts[0] %}
-                {% assign repo = parts[1] %}
+              {% if owner and repo %}
                 <img src="https://img.shields.io/github/stars/{{ owner }}/{{ repo }}?style=flat&color=7dd3fc" alt="stars">
                 <img src="https://img.shields.io/github/v/release/{{ owner }}/{{ repo }}?style=flat&color=60a5fa" alt="latest release">
                 <img src="https://img.shields.io/github/last-commit/{{ owner }}/{{ repo }}?style=flat&color=86efac" alt="last commit">
