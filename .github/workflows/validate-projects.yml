@@ -21,34 +21,4 @@ jobs:
 
       - name: Validate projects YAML
         run: |
-          ruby -e "
-          require 'yaml'
-          path = 'docs/_data/projects.yml'
-          begin
-            data = YAML.load_file(path)
-          rescue => e
-            STDERR.puts "YAML parse error: #{e.message}"
-            exit 1
-          end
-          unless data.is_a?(Hash) && data['projects'].is_a?(Array)
-            STDERR.puts 'projects key missing or not an array'
-            exit 1
-          end
-          errors = []
-          data['projects'].each_with_index do |p,i|
-            unless p.is_a?(Hash)
-              errors << "project[#{i}] is not a map"
-              next
-            end
-            %w[name repo desc].each do |k|
-              if !p.key?(k) || p[k].to_s.strip == ''
-                errors << "project[#{i}] missing or empty #{k}"
-              end
-            end
-          end
-          if errors.any?
-            STDERR.puts errors.join("\n")
-            exit 1
-          end
-          puts 'projects.yml validated successfully'
-          "
+          ruby scripts/validate_projects.rb
