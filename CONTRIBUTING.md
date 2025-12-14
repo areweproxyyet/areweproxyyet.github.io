@@ -20,7 +20,7 @@ projects:
 ```
 
 Local preview
-- We recommend using Bundler to run a local Jekyll server:
+- Run a local Jekyll server with:
 
 ```fish
 cd docs

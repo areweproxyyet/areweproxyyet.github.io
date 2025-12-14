@@ -34,4 +34,12 @@ Notes
 - Only edit `docs/_data/projects.yml` to change the list; other copies (for example `docs/data/projects.yml`) are not used by the Jekyll template and won't affect the site.
 - The CI workflow builds the site using Bundler and deploys the generated `_site`.
 
-# areweproxyyet.github.io
+Deployment notes
+- The workflow attempts to publish using the automatically-provided `GITHUB_TOKEN`. If repository branch protection or organization policies prevent `GITHUB_TOKEN` from pushing to the `gh-pages` branch, create a personal access token (PAT) with `repo` scope and add it to the repository secrets as `PAGES_DEPLOY_TOKEN`.
+
+	To create the secret:
+
+	1. Go to your repository on GitHub → Settings → Secrets and variables → Actions → New repository secret.
+ 2. Name it `PAGES_DEPLOY_TOKEN` and paste a PAT that has `repo` scope.
+
+	The workflow will prefer `PAGES_DEPLOY_TOKEN` if present and fall back to `GITHUB_TOKEN` otherwise.
