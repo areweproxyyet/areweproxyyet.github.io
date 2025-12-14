@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -37,7 +37,9 @@ jobs:
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Prefer a user-provided token with repo write rights if available,
+          # otherwise fall back to the default GITHUB_TOKEN (requires contents: write permission above).
+          github_token: ${{ secrets.PAGES_DEPLOY_TOKEN || secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           # keep empty to let action set commit message automatically
           # user can change Pages settings to 'gh-pages' branch if needed
