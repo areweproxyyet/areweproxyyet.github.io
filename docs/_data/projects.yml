@@ -11,3 +11,7 @@ projects:
     repo: https://github.com/sadoyan/aralez
     desc: Aralez (Արալեզ), Reverse proxy built on top of Cloudflare's Pingora.
     site: https://sadoyan.github.io/aralez-docs/
+  - name: Linkerd
+    repo: https://github.com/linkerd/linkerd2
+    desc: Ultralight, security-first service mesh for Kubernetes.
+    site: https://linkerd.io/
