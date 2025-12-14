@@ -1,0 +1,48 @@
+---
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Are We Proxy Yet — Rust HTTP Proxy Implementations</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Are We Proxy Yet</h1>
+        <p class="tagline">A curated list of Rust projects that can be used as HTTP proxy servers.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="projects">
+        <h2>Projects</h2>
+        <ul class="project-list">
+          {% for p in site.data.projects.projects %}
+          <li class="project-item">
+            <a href="{{ p.repo }}" target="_blank" rel="noopener noreferrer"><strong>{{ p.name }}</strong></a>
+            <p class="desc">{{ p.desc }}</p>
+            <div class="badges">
+              {% assign parts = p.repo | remove: 'https://github.com/' | split: '/' %}
+              {% if parts.size >= 2 %}
+                {% assign owner = parts[0] %}
+                {% assign repo = parts[1] %}
+                <img src="https://img.shields.io/github/stars/{{ owner }}/{{ repo }}?style=flat&color=7dd3fc" alt="stars">
+                <img src="https://img.shields.io/github/v/release/{{ owner }}/{{ repo }}?style=flat&color=60a5fa" alt="latest release">
+                <img src="https://img.shields.io/github/last-commit/{{ owner }}/{{ repo }}?style=flat&color=86efac" alt="last commit">
+              {% endif %}
+            </div>
+            <a class="repo" href="{{ p.repo }}">{{ p.repo }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p>Want to add a project? Open a pull request on this repo.</p>
+      </footer>
+    </main>
+  </body>
+</html>

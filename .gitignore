@@ -1,0 +1,15 @@
+# Jekyll and build artifacts
+_site/
+.bundle/
+.jekyll-cache/
+.sass-cache/
+.DS_Store
+
+# Editor temporary files
+*.swp
+*~
+
+# OS files
+Thumbs.db
+.idea/
+.vscode/
