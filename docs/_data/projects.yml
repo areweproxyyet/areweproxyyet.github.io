@@ -36,3 +36,7 @@ projects:
     repo: https://github.com/junkurihara/rust-rpxy
     desc: A simple and ultrafast http reverse proxy serving multiple domain names and terminating TLS for http/1.1, 2 and 3, written in Rust 
     site: https://rpxy.io/
+  - name: rama
+    repo: https://github.com/plabayo/rama
+    desc: modular service framework to move and transform network packets.
+    site: https://ramaproxy.org/
