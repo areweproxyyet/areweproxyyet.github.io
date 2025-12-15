@@ -30,13 +30,17 @@ projects:
     site: https://www.memorysafety.org/initiative/reverse-proxy/
   - name: Sōzu
     repo: https://github.com/sozu-proxy/sozu
-    desc: Sōzu HTTP reverse proxy, configurable at runtime, fast and safe, built in Rust. It is awesome! 
+    desc: Sōzu HTTP reverse proxy, configurable at runtime, fast and safe, built in Rust. It is awesome!
     site: https://www.sozu.io/
   - name: rpxy
     repo: https://github.com/junkurihara/rust-rpxy
-    desc: A simple and ultrafast http reverse proxy serving multiple domain names and terminating TLS for http/1.1, 2 and 3, written in Rust 
+    desc: A simple and ultrafast http reverse proxy serving multiple domain names and terminating TLS for http/1.1, 2 and 3, written in Rust
     site: https://rpxy.io/
   - name: rama
     repo: https://github.com/plabayo/rama
     desc: modular service framework to move and transform network packets.
     site: https://ramaproxy.org/
+  - name: agentgateway
+    repo: https://github.com/agentgateway/agentgateway
+    desc: Next Generation Agentic Proxy for AI Agents and MCP servers
+    site: https://agentgateway.dev/
