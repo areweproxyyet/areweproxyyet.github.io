@@ -21,3 +21,6 @@ projects:
   - name: gateryx
     repo: https://github.com/eva-ics/gateryx
     desc: Lightweight WAF with built-in IDP.
+  - name: pingora
+    repo: https://github.com/cloudflare/pingora
+    desc: A library for building fast, reliable and evolvable network services.
