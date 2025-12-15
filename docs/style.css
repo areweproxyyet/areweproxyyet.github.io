@@ -10,14 +10,13 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: radial-gradient(1200px 600px at 10% 10%, rgba(125,211,252,0.06), transparent),
-              linear-gradient(180deg,#071021 0%, var(--bg) 100%);
+  background: var(--bg);
   color: #e6eef6;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
 .container{max-width:980px;margin:0 auto;padding:28px}
-.site-header{padding:40px 0;text-align:left}
+.site-header{padding: 40px 0 0 0;text-align:left}
 .site-header h1{margin:0;font-size:36px;letter-spacing:-0.02em}
 .tagline{color:var(--muted);margin-top:6px}
 .intro{margin:20px 0;padding:18px;background:var(--glass);border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
@@ -28,6 +27,7 @@ body{
 .project-item a{color:var(--accent);text-decoration:none}
 .project-item .desc{color:var(--muted);margin:8px 0 6px 0}
 .repo{font-size:13px;color:#bfefff}
+.self-repo{font-size:13px;color:#bfefff}
 .badges{display:flex;gap:8px;margin:6px 0}
 .badges img{height:20px;border-radius:4px}
 .project-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
@@ -38,6 +38,6 @@ body{
 .license-pill{display:inline-block;margin-left:8px;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,0.02);color:#ffd; font-size:12px;border:1px solid rgba(255,255,255,0.03)}
 .footer{margin-top:28px;padding:18px;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.02)}
 
-@media(min-width:720px){
+@media(min-width:1260px){
   .project-list{grid-template-columns:repeat(2,1fr)}
 }
