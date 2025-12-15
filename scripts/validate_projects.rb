@@ -47,6 +47,9 @@ data['projects'].each_with_index do |p, i|
   if p.key?('icon') && !valid_url?(p['icon'])
     errors << "project[#{i}] has invalid icon URL: #{p['icon']}"
   end
+  if p.key?('license') && p['license'].to_s.strip == ''
+    errors << "project[#{i}] has an empty license field"
+  end
 end
 
 if errors.any?

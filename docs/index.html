@@ -49,9 +49,13 @@
                 <img src="https://img.shields.io/github/stars/{{ owner }}/{{ repo }}?style=flat&color=7dd3fc" alt="stars">
                 <img src="https://img.shields.io/github/v/release/{{ owner }}/{{ repo }}?style=flat&color=60a5fa" alt="latest release">
                 <img src="https://img.shields.io/github/last-commit/{{ owner }}/{{ repo }}?style=flat&color=86efac" alt="last commit">
+                <img src="https://img.shields.io/github/license/{{ owner }}/{{ repo }}?style=flat&color=fdb" alt="license">
               {% endif %}
             </div>
-            <a class="repo" href="{{ p.repo }}">{{ p.repo }}</a>
+              <a class="repo" href="{{ p.repo }}">{{ p.repo }}</a>
+              {% if p.license %}
+                <span class="license-pill">{{ p.license }}</span>
+              {% endif %}
           </li>
           {% endfor %}
         </ul>
