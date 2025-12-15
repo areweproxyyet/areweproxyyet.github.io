@@ -24,3 +24,7 @@ projects:
   - name: pingora
     repo: https://github.com/cloudflare/pingora
     desc: A library for building fast, reliable and evolvable network services.
+  - name: river
+    repo: https://github.com/memorysafety/river
+    desc: river is a Reverse Proxy Application based on the pingora library from Cloudflare.
+    site: https://www.memorysafety.org/initiative/reverse-proxy/
