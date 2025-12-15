@@ -18,3 +18,6 @@ projects:
   - name: Griffin
     repo: https://github.com/exajoy/griffin
     desc: A lightweight gRPC-Web and gRPC proxy.
+  - name: gateryx
+    repo: https://github.com/eva-ics/gateryx
+    desc: Lightweight WAF with built-in IDP.
