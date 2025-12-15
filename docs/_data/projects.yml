@@ -15,3 +15,6 @@ projects:
     repo: https://github.com/linkerd/linkerd2
     desc: Ultralight, security-first service mesh for Kubernetes.
     site: https://linkerd.io/
+  - name: Griffin
+    repo: https://github.com/exajoy/griffin
+    desc: A lightweight gRPC-Web and gRPC proxy.
