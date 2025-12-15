@@ -28,3 +28,7 @@ projects:
     repo: https://github.com/memorysafety/river
     desc: river is a Reverse Proxy Application based on the pingora library from Cloudflare.
     site: https://www.memorysafety.org/initiative/reverse-proxy/
+  - name: Sōzu
+    repo: https://github.com/sozu-proxy/sozu
+    desc: Sōzu HTTP reverse proxy, configurable at runtime, fast and safe, built in Rust. It is awesome! 
+    site: https://www.sozu.io/
