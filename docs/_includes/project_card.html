@@ -1,0 +1,30 @@
+<li class="project-item">
+  <div class="project-head">
+    {% if include.owner %}
+      <a class="icon-link" href="{% if include.p.site %}{{ include.p.site }}{% else %}{{ include.p.repo }}{% endif %}" target="_blank" rel="noopener noreferrer">
+        <img class="project-icon" src="https://github.com/{{ include.owner }}.png?size=128" alt="{{ include.owner }}">
+      </a>
+    {% endif %}
+
+    <div class="title-wrap">
+      <a href="{{ include.p.repo }}" target="_blank" rel="noopener noreferrer"><strong>{{ include.p.name }}</strong></a>
+      {% if include.p.site %}
+        <a class="site-link" href="{{ include.p.site }}" target="_blank" rel="noopener noreferrer">Website</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <p class="desc">{{ include.p.desc }}</p>
+  <div class="badges">
+    {% if include.owner and include.repo %}
+      <img src="https://img.shields.io/github/stars/{{ include.owner }}/{{ include.repo }}?style=flat&color=7dd3fc" alt="stars">
+      <img src="https://img.shields.io/github/v/release/{{ include.owner }}/{{ include.repo }}?style=flat&color=60a5fa" alt="latest release">
+      <img src="https://img.shields.io/github/last-commit/{{ include.owner }}/{{ include.repo }}?style=flat&color=86efac" alt="last commit">
+      <img src="https://img.shields.io/github/license/{{ include.owner }}/{{ include.repo }}?style=flat&color=fdb" alt="license">
+    {% endif %}
+  </div>
+  <a class="repo" href="{{ include.p.repo }}">{{ include.p.repo }}</a>
+  {% if include.p.license %}
+    <span class="license-pill">{{ include.p.license }}</span>
+  {% endif %}
+</li>

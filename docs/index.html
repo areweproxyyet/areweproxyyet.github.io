@@ -19,46 +19,35 @@
     <main class="container">
       <section class="projects">
         <h2>Projects</h2>
-        <ul class="project-list">
-          {% for p in site.data.projects.projects %}
-          <li class="project-item">
-            {% assign parts = p.repo | remove: 'https://github.com/' | split: '/' %}
-            {% if parts.size >= 2 %}
-              {% assign owner = parts[0] %}
-              {% assign repo = parts[1] %}
-            {% endif %}
 
-            <div class="project-head">
-              {% if owner %}
-                <a class="icon-link" href="{% if p.site %}{{ p.site }}{% else %}{{ p.repo }}{% endif %}" target="_blank" rel="noopener noreferrer">
-                  <img class="project-icon" src="https://github.com/{{ owner }}.png?size=128" alt="{{ owner }}">
-                </a>
-              {% endif %}
+        {%- comment -%}
+        Define the sections you want to show here. The key is the `kind` value
+        used in `docs/_data/projects.yml`, the value is the human-visible title.
+        Adding more sections only requires adding entries to this map.
+        {%- endcomment -%}
+        {% assign sections = "program:Programs,library:Libraries" | split: "," %}
 
-              <div class="title-wrap">
-                <a href="{{ p.repo }}" target="_blank" rel="noopener noreferrer"><strong>{{ p.name }}</strong></a>
-                {% if p.site %}
-                  <a class="site-link" href="{{ p.site }}" target="_blank" rel="noopener noreferrer">Website</a>
-                {% endif %}
-              </div>
-            </div>
+        {%- comment -%} project_card include is in _includes/project_card.html {%- endcomment -%}
 
-            <p class="desc">{{ p.desc }}</p>
-            <div class="badges">
-              {% if owner and repo %}
-                <img src="https://img.shields.io/github/stars/{{ owner }}/{{ repo }}?style=flat&color=7dd3fc" alt="stars">
-                <img src="https://img.shields.io/github/v/release/{{ owner }}/{{ repo }}?style=flat&color=60a5fa" alt="latest release">
-                <img src="https://img.shields.io/github/last-commit/{{ owner }}/{{ repo }}?style=flat&color=86efac" alt="last commit">
-                <img src="https://img.shields.io/github/license/{{ owner }}/{{ repo }}?style=flat&color=fdb" alt="license">
-              {% endif %}
-            </div>
-              <a class="repo" href="{{ p.repo }}">{{ p.repo }}</a>
-              {% if p.license %}
-                <span class="license-pill">{{ p.license }}</span>
-              {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
+        {% for s in sections %}
+          {% assign parts = s | split: ':' %}
+          {% assign kind = parts[0] %}
+          {% assign title = parts[1] %}
+          {% assign items = site.data.projects.projects | where: "kind", kind %}
+          {% if items.size > 0 %}
+            <h3>{{ title }} ({{ items.size }})</h3>
+            <ul class="project-list">
+              {% for p in items %}
+                {% assign parts = p.repo | remove: 'https://github.com/' | split: '/' %}
+                {% if parts.size >= 2 %}
+                    {% assign owner = parts[0] %}
+                    {% assign repo = parts[1] %}
+                  {% endif %}
+                  {% include project_card.html p=p owner=owner repo=repo %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
       </section>
 
       <footer class="footer">

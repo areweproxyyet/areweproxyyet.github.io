@@ -40,6 +40,14 @@ data['projects'].each_with_index do |p, i|
     end
   end
 
+  # kind must be present and one of allowed values
+  allowed_kinds = %w[program library]
+  if !p.key?('kind') || p['kind'].to_s.strip == ''
+    errors << "project[#{i}] missing or empty kind"
+  elsif !allowed_kinds.include?(p['kind'].to_s)
+    errors << "project[#{i}] has invalid kind: #{p['kind']} (must be one of #{allowed_kinds.join(', ')})"
+  end
+
   if p.key?('site') && !valid_url?(p['site'])
     errors << "project[#{i}] has invalid site URL: #{p['site']}"
   end

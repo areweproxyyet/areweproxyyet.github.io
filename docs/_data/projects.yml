@@ -3,44 +3,56 @@ projects:
     repo: https://github.com/agentgateway/agentgateway
     desc: Next Generation Agentic Proxy for AI Agents and MCP servers
     site: https://agentgateway.dev/
+    kind: program
   - name: aralez
     repo: https://github.com/sadoyan/aralez
     desc: Aralez (Արալեզ), Reverse proxy built on top of Cloudflare's Pingora.
     site: https://sadoyan.github.io/aralez-docs/
+    kind: program
   - name: ferron
     repo: https://github.com/ferronweb/ferron
     desc: A fast, memory-safe web server written in Rust.
     site: https://ferron.sh/
+    kind: program
   - name: gateryx
     repo: https://github.com/eva-ics/gateryx
     desc: Lightweight WAF with built-in IDP.
+    kind: program
   - name: Griffin
     repo: https://github.com/exajoy/griffin
     desc: A lightweight gRPC-Web and gRPC proxy.
+    kind: program
   - name: Linkerd
     repo: https://github.com/linkerd/linkerd2
     desc: Ultralight, security-first service mesh for Kubernetes.
     site: https://linkerd.io/
+    kind: program
   - name: pingoo
     repo: https://github.com/pingooio/pingoo
     desc: The fast and secure Load Balancer / API Gateway / Reverse Proxy with built-in service discovery, GeoIP, WAF, bot protection and much more.
     site: https://pingoo.io/
+    kind: program
   - name: pingora
     repo: https://github.com/cloudflare/pingora
     desc: A library for building fast, reliable and evolvable network services.
+    kind: library
   - name: rama
     repo: https://github.com/plabayo/rama
     desc: modular service framework to move and transform network packets.
     site: https://ramaproxy.org/
+    kind: library
   - name: river
     repo: https://github.com/memorysafety/river
     desc: river is a Reverse Proxy Application based on the pingora library from Cloudflare.
     site: https://www.memorysafety.org/initiative/reverse-proxy/
+    kind: program
   - name: rpxy
     repo: https://github.com/junkurihara/rust-rpxy
     desc: A simple and ultrafast http reverse proxy serving multiple domain names and terminating TLS for http/1.1, 2 and 3, written in Rust
     site: https://rpxy.io/
+    kind: program
   - name: Sōzu
     repo: https://github.com/sozu-proxy/sozu
     desc: Sōzu HTTP reverse proxy, configurable at runtime, fast and safe, built in Rust. It is awesome!
     site: https://www.sozu.io/
+    kind: program
