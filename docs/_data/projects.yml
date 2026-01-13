@@ -56,3 +56,7 @@ projects:
     desc: Sōzu HTTP reverse proxy, configurable at runtime, fast and safe, built in Rust. It is awesome!
     site: https://www.sozu.io/
     kind: program
+  - name: g3
+    repo: https://github.com/bytedance/g3
+    desc: g3 is a collection of proxy servers, including a forward proxy server
+    kind: program
