@@ -45,6 +45,12 @@ projects:
     licence: Apache-2.0
     kind: program
     desc: A reverse proxy like nginx, built on pingora, simple and efficient.
+  - name: Fault
+    site: https://fault-project.com/
+    repo: https://github.com/fault-project/fault-cli
+    desc: fault is an Open-Source Rust-powered CLI and AI-MCP server that lets engineers and AI agents team up to ship production-ready code.
+    licence: Apache-2.0
+    kind: program
   - name: pingora
     repo: https://github.com/cloudflare/pingora
     desc: A library for building fast, reliable and evolvable network services.
