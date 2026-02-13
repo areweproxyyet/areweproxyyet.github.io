@@ -39,6 +39,12 @@ projects:
     site: https://pingoo.io/
     licence: MIT
     kind: program
+  - name: pingap
+    repo: https://github.com/vicanso/pingap
+    site: https://pingap.io/pingap-en/
+    licence: Apache-2.0
+    kind: program
+    desc: A reverse proxy like nginx, built on pingora, simple and efficient.
   - name: pingora
     repo: https://github.com/cloudflare/pingora
     desc: A library for building fast, reliable and evolvable network services.
@@ -56,6 +62,18 @@ projects:
     site: https://www.memorysafety.org/initiative/reverse-proxy/
     kind: program
     licence: Apache-2.0
+  - name: Snakeway
+    repo: https://github.com/snakewayhq/snakeway
+    desc: Snakeway is a modern, extensible L7 reverse proxy built with Rust.
+    site: https://snakeway.dev/
+    kind: program
+    licence: Apache-2.0
+  - name: Vetis
+    repo: https://github.com/ararog/vetis
+    kind: program
+    licence: MIT
+    site: https://ararog.github.io/vetis/
+    desc: A blazingly fast, minimalist HTTP server built for modern Rust applications. 
   - name: rpxy
     repo: https://github.com/junkurihara/rust-rpxy
     desc: A simple and ultrafast http reverse proxy serving multiple domain names and terminating TLS for http/1.1, 2 and 3, written in Rust
