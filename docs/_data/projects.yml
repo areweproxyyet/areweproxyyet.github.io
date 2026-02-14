@@ -99,6 +99,7 @@ projects:
     licence: MIT
   - name: Fantasma Cero
     licence: Apache-2.0
+    repo: https://github.com/cocky-punch/fantasma_cero
     site: https://fantasma0.turbamentum.one/
     kind: program
     desc: WAF against AI-driven crawlers and scrapers. Piss bloody bots off famously
