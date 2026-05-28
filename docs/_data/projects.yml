@@ -110,3 +110,14 @@ projects:
     long-desc: A blazing-fast Rust proxy that translates Anthropic's Claude API to Google's Cloud Code API. Use Claude and Gemini models through a single Anthropic-compatible endpoint.
     kind: program
     licence: MIT
+  - name: Jokoway
+    repo: https://github.com/hijriyan/jokoway
+    desc: Jokoway is a high-performance API Gateway built on Pingora (Rust) with dead-simple YAML configs. Inspired by Traefik’s expressive routing rules and Kong’s DB-less declarative configuration model.
+    licence: MIT
+    kind: program
+  - name: Vicarian
+    repo: https://github.com/tarka/vicarian
+    kind: program
+    licence: Apache-2.0
+    desc: Vicarian is a TLS-first reverse proxy with built-in ACME support.
+    site: https://vicarian.org/
