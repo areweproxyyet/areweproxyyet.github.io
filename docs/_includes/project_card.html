@@ -22,6 +22,12 @@
       <img src="https://img.shields.io/github/last-commit/{{ include.owner }}/{{ include.repo }}?style=flat&color=86efac" alt="last commit">
       <img src="https://img.shields.io/github/license/{{ include.owner }}/{{ include.repo }}?style=flat&color=fdb" alt="license">
     {% endif %}
+    {% assign deps = site.data.pingora[include.p.repo] %}
+    {% if deps.pingora %}
+      <a href="https://github.com/cloudflare/pingora" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/static/v1?label=pingora&message={{ deps.pingora | url_encode }}&style=flat&color=f9a8d4" alt="pingora {{ deps.pingora }}">
+      </a>
+    {% endif %}
   </div>
   <a class="repo" href="{{ include.p.repo }}">{{ include.p.repo }}</a>
   {% if include.p.license %}

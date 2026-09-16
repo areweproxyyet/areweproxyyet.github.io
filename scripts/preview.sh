@@ -7,6 +7,11 @@ set -euo pipefail
 # - runs `jekyll serve` to preview at http://127.0.0.1:4000
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT_DIR"
+
+echo "Fetching Pingora versions..."
+ruby scripts/pingora_versions.rb || echo "Pingora version fetch failed; badges will be absent." >&2
+
 cd "$ROOT_DIR/docs"
 
 echo "Previewing Jekyll site from: $(pwd)"
