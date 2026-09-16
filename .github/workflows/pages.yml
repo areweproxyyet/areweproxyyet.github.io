@@ -33,8 +33,8 @@ jobs:
         working-directory: ./docs
         run: bundle install
 
-      - name: Fetch Pingora versions
-        run: ruby scripts/pingora_versions.rb
+      - name: Fetch dependency badges
+        run: ruby scripts/project_deps.rb
 
       - name: Build site with Jekyll
         working-directory: ./docs

@@ -1,6 +1,6 @@
 # Jekyll and build artifacts
 _site/
-docs/_data/pingora.yml
+docs/_data/deps.yml
 .bundle/
 .jekyll-cache/
 .sass-cache/

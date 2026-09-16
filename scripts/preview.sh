@@ -9,8 +9,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
-echo "Fetching Pingora versions..."
-ruby scripts/pingora_versions.rb || echo "Pingora version fetch failed; badges will be absent." >&2
+echo "Fetching dependency badges..."
+ruby scripts/project_deps.rb || echo "Dependency fetch failed; dependency badges will be absent." >&2
 
 cd "$ROOT_DIR/docs"
 
