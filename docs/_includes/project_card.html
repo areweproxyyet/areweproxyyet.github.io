@@ -18,14 +18,21 @@
   {% if include.p.note %}
     <p class="note">{{ include.p.note }}</p>
   {% endif %}
+  {% if include.owner and include.repo %}
+  <span class="badge-label">Repository</span>
   <div class="badges">
-    {% if include.owner and include.repo %}
       <img src="https://img.shields.io/github/stars/{{ include.owner }}/{{ include.repo }}?style=flat&color=7dd3fc" alt="stars">
       <img src="https://img.shields.io/github/v/release/{{ include.owner }}/{{ include.repo }}?style=flat&color=60a5fa" alt="latest release">
       <img src="https://img.shields.io/github/last-commit/{{ include.owner }}/{{ include.repo }}?style=flat&color=86efac" alt="last commit">
       <img src="https://img.shields.io/github/license/{{ include.owner }}/{{ include.repo }}?style=flat&color=fdb" alt="license">
-    {% endif %}
-    {% for b in site.data.deps[include.p.repo] %}
+  </div>
+  {% endif %}
+  <a class="repo" href="{{ include.p.repo }}">{{ include.p.repo }}</a>
+  {% assign deps = site.data.deps[include.p.repo] %}
+  {% if deps %}
+  <span class="badge-label">Built on</span>
+  <div class="badges deps-badges">
+    {% for b in deps %}
       {% case b.group %}
         {% when 'foundation' %}{% assign color = 'f9a8d4' %}
         {% when 'tls' %}{% assign color = 'c4b5fd' %}
@@ -39,7 +46,7 @@
       <img src="https://img.shields.io/static/v1?label={{ b.group }}&message={{ message | url_encode }}&style=flat&color={{ color }}" alt="{{ b.group }}: {{ message }}">
     {% endfor %}
   </div>
-  <a class="repo" href="{{ include.p.repo }}">{{ include.p.repo }}</a>
+  {% endif %}
   {% if include.p.license %}
     <span class="license-pill">{{ include.p.license }}</span>
   {% endif %}
