@@ -48,6 +48,10 @@ data['projects'].each_with_index do |p, i|
     errors << "project[#{i}] has invalid kind: #{p['kind']} (must be one of #{allowed_kinds.join(', ')})"
   end
 
+  if p.key?('deps_repo') && !valid_url?(p['deps_repo'])
+    errors << "project[#{i}] has invalid deps_repo URL: #{p['deps_repo']}"
+  end
+
   if p.key?('site') && !valid_url?(p['site'])
     errors << "project[#{i}] has invalid site URL: #{p['site']}"
   end
@@ -57,6 +61,12 @@ data['projects'].each_with_index do |p, i|
   end
   if p.key?('license') && p['license'].to_s.strip == ''
     errors << "project[#{i}] has an empty license field"
+  end
+  if p.key?('foundation') && p['foundation'].to_s != 'custom'
+    errors << "project[#{i}] has invalid foundation: #{p['foundation']} (must be custom)"
+  end
+  if p.key?('note') && p['note'].to_s.strip == ''
+    errors << "project[#{i}] has an empty note field"
   end
 end
 

@@ -3,6 +3,9 @@ name: Build and publish site
 on:
   push:
     branches: [ main ]
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -27,6 +30,9 @@ jobs:
       - name: Install Jekyll dependencies
         working-directory: ./docs
         run: bundle install
+
+      - name: Fetch dependency badges
+        run: ruby scripts/project_deps.rb
 
       - name: Build site with Jekyll
         working-directory: ./docs

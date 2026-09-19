@@ -29,6 +29,7 @@ projects:
     licence: AGPL-3.0
   - name: Linkerd
     repo: https://github.com/linkerd/linkerd2
+    deps_repo: https://github.com/linkerd/linkerd2-proxy
     desc: Ultralight, security-first service mesh for Kubernetes.
     site: https://linkerd.io/
     kind: program
@@ -92,6 +93,7 @@ projects:
     site: https://www.sozu.io/
     kind: program
     licence: AGPL-3.0
+    foundation: custom
   - name: Roxy
     repo: https://github.com/rbas/roxy
     desc: A lightweight local dev proxy — custom domains and auto HTTPS for your localhost.
