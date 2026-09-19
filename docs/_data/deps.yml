@@ -103,6 +103,13 @@ https://github.com/sozu-proxy/sozu:
 - group: tls
   crate: rustls
   version: 0.23.45
+https://github.com/VEY-OSS/vey:
+- group: tls
+  crate: rustls
+  version: 0.23.45
+- group: quic
+  crate: quinn
+  version: 0.11.12
 https://github.com/rbas/roxy:
 - group: foundation
   crate: hyper
