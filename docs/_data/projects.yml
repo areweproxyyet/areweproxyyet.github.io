@@ -121,3 +121,14 @@ projects:
     licence: Apache-2.0
     desc: Vicarian is a TLS-first reverse proxy with built-in ACME support.
     site: https://vicarian.org/
+  - name: Portus
+    repo: https://github.com/Portus-Gateway/Portus
+    kind: program
+    licence: Apache-2.0
+    desc: Kubernetes Gateway API implementation built on Cloudflare's Pingora proxy framework.
+  - name: Húginn Prøxy
+    repo: https://github.com/biandratti/huginn-proxy
+    kind: program
+    licence: Apache-2.0, MIT
+    desc: High-performance reverse proxy forwarding TLS (JA4), HTTP/2 (Akamai), and TCP-SYN (eBPF-powered) fingerprints as HTTP headers.
+    site: https://biandratti.github.io/huginn-proxy/
