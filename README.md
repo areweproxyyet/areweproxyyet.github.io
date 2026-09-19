@@ -4,11 +4,11 @@
 
 # This repository contains a small GitHub Pages site under the `docs/` folder.
 
-The site is built with Jekyll from the `docs/` folder and the GitHub Actions workflow in `.github/workflows/pages.yml` builds the site and deploys the generated static output.
+The site is built with Jekyll from the `docs/` folder and served by GitHub Pages (deploy from the `main` branch), using the built-in Pages build.
 
 How the site data is organized
 - Project entries are stored in `docs/_data/projects.yml`. The Jekyll template in `docs/index.html` reads `site.data.projects.projects` and renders each project card at build time.
-- Dependency badges come from `docs/_data/deps.yml`. The script `scripts/project_deps.rb` generates that file. It fetches `Cargo.lock` from each program repository and reads the direct dependencies of the workspace members. The file is ignored by git. The Pages workflow regenerates it on every build and on a weekly schedule, so nobody updates it by hand.
+- Dependency badges come from `docs/_data/deps.yml`. The script `scripts/project_deps.rb` generates that file. It fetches `Cargo.lock` from each program repository and reads the direct dependencies of the workspace members. The file is committed to the repository so the built-in Pages build ships the badges, and the `refresh-deps` workflow regenerates it and commits the result on every push to `main` and on a weekly schedule, so nobody updates it by hand.
 - Three badge groups exist. The foundation badge shows one of pingora, rama, hyper, or axum, in that priority. The TLS badges show each of rustls, openssl, boring, and native-tls that the project uses. The QUIC badges show each of quinn and s2n-quic that the project uses.
 - Libraries get no dependency badges.
 - An optional `deps_repo` field on a project entry names a different GitHub repository for the dependency lookup only.
@@ -18,7 +18,7 @@ Adding or updating projects
 	- `name`: short display name
 	- `repo`: GitHub URL (e.g. `https://github.com/owner/repo`)
 	- `desc`: a one-line description
-- Commit and push the change to `main` (or open a PR). The GitHub Actions workflow will build and deploy the site.
+- Commit and push the change to `main` (or open a PR). The built-in Pages build deploys the site, and the `refresh-deps` workflow updates the badges.
 
 Building and previewing locally (Bundler only)
 - Requirements: Ruby and Bundler. This repository provides a `docs/Gemfile` to pin the Jekyll version.
@@ -47,10 +47,11 @@ Tests
 
 Notes
 - Only edit `docs/_data/projects.yml` to change the list; other copies (for example `docs/data/projects.yml`) are not used by the Jekyll template and won't affect the site.
-- The CI workflow builds the site using Bundler and deploys the generated `_site`.
+- If you add a project (or change a `deps_repo` or `foundation`), run `ruby scripts/project_deps.rb` from the repository root and commit the updated `docs/_data/deps.yml` so the badges show immediately. Otherwise the `refresh-deps` workflow does it on the next run.
 
 Deployment notes
-- The workflow attempts to publish using the automatically-provided `GITHUB_TOKEN`. If repository branch protection or organization policies prevent `GITHUB_TOKEN` from pushing to the `gh-pages` branch, create a personal access token (PAT) with `repo` scope and add it to the repository secrets as `PAGES_DEPLOY_TOKEN`.
+- The site is deployed by GitHub's built-in Pages build from the `main` branch, so the dependency data must live in the repository (see `docs/_data/deps.yml`).
+- The `refresh-deps` workflow commits the regenerated `docs/_data/deps.yml` back to `main` using the automatically-provided `GITHUB_TOKEN`. If repository branch protection or organization policies prevent `GITHUB_TOKEN` from pushing to `main`, create a personal access token (PAT) with `repo` scope and add it to the repository secrets as `PAGES_DEPLOY_TOKEN`.
 
 	To create the secret:
 

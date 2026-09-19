@@ -1,0 +1,151 @@
+---
+https://github.com/agentgateway/agentgateway:
+- group: foundation
+  crate: hyper
+  version: 1.11.1
+- group: tls
+  crate: rustls
+  version: 0.23.45
+https://github.com/sadoyan/aralez:
+- group: foundation
+  crate: pingora
+  version: 0.8.1
+- group: tls
+  crate: rustls
+  version: 0.23.41
+https://github.com/ferronweb/ferron:
+- group: foundation
+  crate: hyper
+  version: 1.11.1
+- group: tls
+  crate: rustls
+  version: 0.23.45
+- group: quic
+  crate: quinn
+  version: 0.11.12
+https://github.com/eva-ics/gateryx:
+- group: foundation
+  crate: hyper
+  version: 1.8.1
+- group: tls
+  crate: rustls
+  version: 0.23.37
+- group: tls
+  crate: openssl
+  version: 0.10.78
+- group: tls
+  crate: native-tls
+  version: 0.2.15
+https://github.com/exajoy/griffin:
+- group: foundation
+  crate: hyper
+  version: 1.8.1
+https://github.com/linkerd/linkerd2:
+- group: foundation
+  crate: hyper
+  version: 1.11.0
+https://github.com/pingooio/pingoo:
+- group: foundation
+  crate: hyper
+  version: 1.8.1
+- group: tls
+  crate: rustls
+  version: 0.23.36
+https://github.com/vicanso/pingap:
+- group: foundation
+  crate: pingora
+  version: 0.9.0
+- group: tls
+  crate: rustls
+  version: 0.23.45
+https://github.com/fault-project/fault-cli:
+- group: foundation
+  crate: hyper
+  version: 1.10.0
+- group: tls
+  crate: rustls
+  version: 0.23.40
+- group: tls
+  crate: openssl
+  version: 0.10.80
+https://github.com/memorysafety/river:
+- group: foundation
+  crate: pingora
+  version: 0.3.0
+https://github.com/snakewayhq/snakeway:
+- group: foundation
+  crate: pingora
+  version: 0.9.0
+- group: tls
+  crate: rustls
+  version: 0.23.43
+https://github.com/ararog/vetis:
+- group: foundation
+  crate: hyper
+  version: 1.11.1
+https://github.com/junkurihara/rust-rpxy:
+- group: foundation
+  crate: hyper
+  version: 1.11.1
+- group: tls
+  crate: rustls
+  version: 0.23.45
+- group: quic
+  crate: quinn
+  version: 0.11.12
+- group: quic
+  crate: s2n-quic
+  version: 1.88.0
+https://github.com/sozu-proxy/sozu:
+- group: foundation
+  crate: custom
+  version:
+- group: tls
+  crate: rustls
+  version: 0.23.45
+https://github.com/rbas/roxy:
+- group: foundation
+  crate: hyper
+  version: 1.8.1
+- group: tls
+  crate: rustls
+  version: 0.23.36
+https://github.com/cocky-punch/fantasma_cero:
+- group: foundation
+  crate: axum
+  version: 0.8.8
+https://github.com/skyline69/agcp:
+- group: foundation
+  crate: hyper
+  version: 1.8.1
+- group: tls
+  crate: rustls
+  version: 0.23.37
+https://github.com/hijriyan/jokoway:
+- group: foundation
+  crate: pingora
+  version: 0.8.1
+- group: tls
+  crate: rustls
+  version: 0.23.43
+- group: tls
+  crate: boring
+  version: 4.22.0
+https://github.com/tarka/vicarian:
+- group: foundation
+  crate: pingora
+  version: 0.9.0
+- group: tls
+  crate: rustls
+  version: 0.23.44
+https://github.com/Portus-Gateway/Portus:
+- group: foundation
+  crate: pingora
+  version: 0.9.0
+- group: tls
+  crate: rustls
+  version: 0.23.43
+https://github.com/biandratti/huginn-proxy:
+- group: foundation
+  crate: hyper
+  version: 1.11.1
