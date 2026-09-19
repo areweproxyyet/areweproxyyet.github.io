@@ -26,9 +26,12 @@ body{
 .project-item{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column}
 .project-item a{color:var(--accent);text-decoration:none}
 .project-item .desc{color:var(--muted);margin:8px 0 6px 0}
+.note{color:var(--muted);font-size:13px;margin:0 0 6px 0;font-style:italic}
 .repo{font-size:13px;color:#bfefff}
 .self-repo{font-size:13px;color:#bfefff}
-.badges{display:flex;gap:8px;margin:6px 0}
+.badge-label{display:block;margin-top:8px;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted)}
+.repo + .badge-label{margin-top:16px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 6px 0}
 .badges img{height:20px;border-radius:4px}
 .project-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
 .project-icon{width:48px;height:48px;border-radius:8px;object-fit:cover;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02)}

@@ -4,59 +4,138 @@ projects:
     desc: Next Generation Agentic Proxy for AI Agents and MCP servers
     site: https://agentgateway.dev/
     kind: program
+    licence: Apache-2.0
   - name: aralez
     repo: https://github.com/sadoyan/aralez
     desc: Aralez (Արալեզ), Reverse proxy built on top of Cloudflare's Pingora.
     site: https://sadoyan.github.io/aralez-docs/
     kind: program
+    licence: Apache-2.0
   - name: ferron
     repo: https://github.com/ferronweb/ferron
     desc: A fast, memory-safe web server written in Rust.
     site: https://ferron.sh/
     kind: program
+    licence: MIT
   - name: gateryx
     repo: https://github.com/eva-ics/gateryx
     desc: Lightweight WAF with built-in IDP.
     kind: program
+    licence: Apache-2.0
   - name: Griffin
     repo: https://github.com/exajoy/griffin
     desc: A lightweight gRPC-Web and gRPC proxy.
     kind: program
+    licence: AGPL-3.0
   - name: Linkerd
     repo: https://github.com/linkerd/linkerd2
+    deps_repo: https://github.com/linkerd/linkerd2-proxy
     desc: Ultralight, security-first service mesh for Kubernetes.
     site: https://linkerd.io/
     kind: program
+    licence: Apache-2.0
   - name: pingoo
     repo: https://github.com/pingooio/pingoo
     desc: The fast and secure Load Balancer / API Gateway / Reverse Proxy with built-in service discovery, GeoIP, WAF, bot protection and much more.
     site: https://pingoo.io/
+    licence: MIT
+    kind: program
+  - name: pingap
+    repo: https://github.com/vicanso/pingap
+    site: https://pingap.io/pingap-en/
+    licence: Apache-2.0
+    kind: program
+    desc: A reverse proxy like nginx, built on pingora, simple and efficient.
+  - name: Fault
+    site: https://fault-project.com/
+    repo: https://github.com/fault-project/fault-cli
+    desc: fault is an Open-Source Rust-powered CLI and AI-MCP server that lets engineers and AI agents team up to ship production-ready code.
+    licence: Apache-2.0
     kind: program
   - name: pingora
     repo: https://github.com/cloudflare/pingora
     desc: A library for building fast, reliable and evolvable network services.
+    licence: Apache-2.0
     kind: library
   - name: rama
     repo: https://github.com/plabayo/rama
     desc: modular service framework to move and transform network packets.
     site: https://ramaproxy.org/
     kind: library
+    licence: Apache-2.0
   - name: river
     repo: https://github.com/memorysafety/river
     desc: river is a Reverse Proxy Application based on the pingora library from Cloudflare.
     site: https://www.memorysafety.org/initiative/reverse-proxy/
     kind: program
+    licence: Apache-2.0
+  - name: Snakeway
+    repo: https://github.com/snakewayhq/snakeway
+    desc: Snakeway is a modern, extensible L7 reverse proxy built with Rust.
+    site: https://snakeway.dev/
+    kind: program
+    licence: Apache-2.0
+  - name: Vetis
+    repo: https://github.com/ararog/vetis
+    kind: program
+    licence: MIT
+    site: https://ararog.github.io/vetis/
+    desc: A blazingly fast, minimalist HTTP server built for modern Rust applications. 
   - name: rpxy
     repo: https://github.com/junkurihara/rust-rpxy
     desc: A simple and ultrafast http reverse proxy serving multiple domain names and terminating TLS for http/1.1, 2 and 3, written in Rust
     site: https://rpxy.io/
     kind: program
+    licence: MIT
   - name: Sōzu
     repo: https://github.com/sozu-proxy/sozu
     desc: Sōzu HTTP reverse proxy, configurable at runtime, fast and safe, built in Rust. It is awesome!
     site: https://www.sozu.io/
     kind: program
-  - name: g3
-    repo: https://github.com/bytedance/g3
-    desc: g3 is a collection of proxy servers, including a forward proxy server
+    licence: AGPL-3.0
+    foundation: custom    
+  - name: Vey
+    repo: https://github.com/VEY-OSS/vey
+    desc: A versatile proxy and gateway platform
     kind: program
+    licence: Apache-2.0
+  - name: Roxy
+    repo: https://github.com/rbas/roxy
+    desc: A lightweight local dev proxy — custom domains and auto HTTPS for your localhost.
+    kind: program
+    licence: MIT
+  - name: Fantasma Cero
+    licence: Apache-2.0
+    repo: https://github.com/cocky-punch/fantasma_cero
+    site: https://fantasma0.turbamentum.one/
+    kind: program
+    desc: WAF against AI-driven crawlers and scrapers. Piss bloody bots off famously
+  - name: Agcp
+    site: https://dasguney.com/agcp/
+    repo: https://github.com/skyline69/agcp
+    desc: Extremely Lightweight Antigravity-Claude-Proxy
+    long-desc: A blazing-fast Rust proxy that translates Anthropic's Claude API to Google's Cloud Code API. Use Claude and Gemini models through a single Anthropic-compatible endpoint.
+    kind: program
+    licence: MIT
+  - name: Jokoway
+    repo: https://github.com/hijriyan/jokoway
+    desc: Jokoway is a high-performance API Gateway built on Pingora (Rust) with dead-simple YAML configs. Inspired by Traefik’s expressive routing rules and Kong’s DB-less declarative configuration model.
+    licence: MIT
+    kind: program
+  - name: Vicarian
+    repo: https://github.com/tarka/vicarian
+    kind: program
+    licence: Apache-2.0
+    desc: Vicarian is a TLS-first reverse proxy with built-in ACME support.
+    site: https://vicarian.org/
+  - name: Portus
+    repo: https://github.com/Portus-Gateway/Portus
+    kind: program
+    licence: Apache-2.0
+    desc: Kubernetes Gateway API implementation built on Cloudflare's Pingora proxy framework.
+  - name: Húginn Prøxy
+    repo: https://github.com/biandratti/huginn-proxy
+    kind: program
+    licence: Apache-2.0, MIT
+    desc: High-performance reverse proxy forwarding TLS (JA4), HTTP/2 (Akamai), and TCP-SYN (eBPF-powered) fingerprints as HTTP headers.
+    site: https://biandratti.github.io/huginn-proxy/

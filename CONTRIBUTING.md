@@ -29,6 +29,13 @@ bundle install
 bundle exec jekyll serve --host 127.0.0.1 --port 4000 --livereload
 ```
 
+Dependency badges
+- Programs get badges for their foundation crate (pingora, rama, hyper, or axum), their TLS crates, and their QUIC crates.
+- The badges are automatic. The build reads the `Cargo.lock` file at the root of the GitHub repository and uses only direct dependencies.
+- Do not add version fields for them to `projects.yml`.
+- If the proxy code lives in a different repository than `repo`, add `deps_repo` with that GitHub URL. The badges then read the `Cargo.lock` file from `deps_repo`, and everything else on the card still uses `repo`.
+- If the detected foundation is wrong, for example because the project has its own HTTP stack, add `foundation: custom` to the entry. An optional `note` field with one sentence appears on the card if you want to explain the situation.
+
 CI validation
 - The repository includes a GitHub Action that validates `docs/_data/projects.yml` on pull requests and pushes. The action checks that the file parses as YAML and that each project entry contains non-empty `name`, `repo`, and `desc` fields.
 

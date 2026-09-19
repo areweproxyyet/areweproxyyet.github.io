@@ -7,6 +7,11 @@ set -euo pipefail
 # - runs `jekyll serve` to preview at http://127.0.0.1:4000
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT_DIR"
+
+echo "Fetching dependency badges..."
+ruby scripts/project_deps.rb || echo "Dependency fetch failed; dependency badges will be absent." >&2
+
 cd "$ROOT_DIR/docs"
 
 echo "Previewing Jekyll site from: $(pwd)"
