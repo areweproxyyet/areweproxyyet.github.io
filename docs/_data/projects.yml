@@ -93,7 +93,12 @@ projects:
     site: https://www.sozu.io/
     kind: program
     licence: AGPL-3.0
-    foundation: custom
+    foundation: custom    
+  - name: Vey
+    repo: https://github.com/VEY-OSS/vey
+    desc: A versatile proxy and gateway platform
+    kind: program
+    licence: Apache-2.0
   - name: Roxy
     repo: https://github.com/rbas/roxy
     desc: A lightweight local dev proxy — custom domains and auto HTTPS for your localhost.
