@@ -9,7 +9,7 @@ https://github.com/agentgateway/agentgateway:
 https://github.com/sadoyan/aralez:
 - group: foundation
   crate: pingora
-  version: 0.8.1
+  version: 0.9.0
 - group: tls
   crate: rustls
   version: 0.23.41
@@ -95,7 +95,7 @@ https://github.com/junkurihara/rust-rpxy:
   version: 0.11.12
 - group: quic
   crate: s2n-quic
-  version: 1.88.0
+  version: 1.89.0
 https://github.com/sozu-proxy/sozu:
 - group: foundation
   crate: custom
