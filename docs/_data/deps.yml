@@ -83,6 +83,12 @@ https://github.com/ararog/vetis:
 - group: foundation
   crate: hyper
   version: 1.11.1
+- group: tls
+  crate: rustls
+  version: 0.23.45
+- group: quic
+  crate: quinn
+  version: 0.11.12
 https://github.com/junkurihara/rust-rpxy:
 - group: foundation
   crate: hyper
@@ -95,7 +101,7 @@ https://github.com/junkurihara/rust-rpxy:
   version: 0.11.12
 - group: quic
   crate: s2n-quic
-  version: 1.89.0
+  version: 1.90.0
 https://github.com/sozu-proxy/sozu:
 - group: foundation
   crate: custom
