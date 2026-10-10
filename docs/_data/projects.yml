@@ -139,3 +139,9 @@ projects:
     licence: Apache-2.0, MIT
     desc: High-performance reverse proxy forwarding TLS (JA4), HTTP/2 (Akamai), and TCP-SYN (eBPF-powered) fingerprints as HTTP headers.
     site: https://biandratti.github.io/huginn-proxy/
+  - name: Pingclair
+    repo: https://github.com/dorianverlaine/pingclair
+    desc: A Rust web server and reverse proxy built on Pingora, with Caddyfile-style configuration, automatic HTTPS, HTTP/3, load balancing, static files, and FastCGI.
+    site: https://pingclair.com
+    kind: program
+    licence: Apache-2.0
