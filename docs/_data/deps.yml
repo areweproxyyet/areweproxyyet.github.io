@@ -16,7 +16,7 @@ https://github.com/sadoyan/aralez:
 https://github.com/ferronweb/ferron:
 - group: foundation
   crate: hyper
-  version: 1.11.1
+  version: 1.12.0
 - group: tls
   crate: rustls
   version: 0.23.45
@@ -82,7 +82,7 @@ https://github.com/snakewayhq/snakeway:
 https://github.com/ararog/vetis:
 - group: foundation
   crate: hyper
-  version: 1.11.1
+  version: 1.12.0
 - group: tls
   crate: rustls
   version: 0.23.45
@@ -92,7 +92,7 @@ https://github.com/ararog/vetis:
 https://github.com/junkurihara/rust-rpxy:
 - group: foundation
   crate: hyper
-  version: 1.11.1
+  version: 1.12.0
 - group: tls
   crate: rustls
   version: 0.23.45
@@ -153,12 +153,22 @@ https://github.com/tarka/vicarian:
   version: 0.23.45
 https://github.com/Portus-Gateway/Portus:
 - group: foundation
-  crate: pingora
-  version: 0.9.0
+  crate: rama
+  version: 0.4.0
 - group: tls
   crate: rustls
   version: 0.23.43
 https://github.com/biandratti/huginn-proxy:
 - group: foundation
   crate: hyper
-  version: 1.11.1
+  version: 1.12.0
+https://github.com/dorianverlaine/pingclair:
+- group: foundation
+  crate: pingora
+  version: 0.9.0
+- group: tls
+  crate: rustls
+  version: 0.23.45
+- group: tls
+  crate: boring
+  version: 5.2.0
